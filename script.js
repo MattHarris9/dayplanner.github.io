@@ -39,21 +39,21 @@ $(document).ready(function(){
 
 
     $(".saveBtn").on("click", function() {
-        //console.log(this);
+        
         var value = $(this).siblings(".description").val(); // This gets the VALUE of the description in jQuery
         var time = $(this).siblings(".hour").text();
         localStorage.setItem(time, value);
         $("this").siblings(".description").textContent(localStorage.value);
 
     });
-    // Displays the current date and time
+    
     $("#currentDay").text(moment().format("llll"));
 
-    // Determines which color class to apply based on the current hour
+    
     var elements = $(".time-block");
     var d = new Date();
    var h = d.getHours();
-   // var h = 15;
+   
     
     for (i = 0; i < elements.length; i++) {
         var t = parseInt(elements[i].getAttribute("data-hour"));
